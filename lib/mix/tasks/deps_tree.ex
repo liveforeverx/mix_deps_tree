@@ -21,6 +21,7 @@ defmodule Mix.Tasks.Deps.Tree do
 
   @spec run(OptionParser.argv) :: :ok
   def run(args) do
+    Mix.Task.run "loadpaths"
     {parsed, _, _} = OptionParser.parse(args)
     parsed = case parsed[:exclude] do
       nil -> []
