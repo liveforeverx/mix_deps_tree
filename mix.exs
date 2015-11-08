@@ -3,11 +3,13 @@ defmodule MixDepsTree.Mixfile do
 
   def project do
     [app: :mix_deps_tree,
-     version: "0.0.1",
-     elixir: "~> 1.2-dev",
+     version: "0.1.0",
+     elixir: "~> 1.0",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps]
+     deps: deps,
+     description: description,
+     package: package]
   end
 
   # Configuration for the OTP application
@@ -28,5 +30,14 @@ defmodule MixDepsTree.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     []
+  end
+
+  defp description do
+    "Mix task to print dependency tree of an application to a terminal"
+  end
+
+  defp package do
+    [maintainers: ["Dmitry Russ(Aleksandrov)"],
+     links: %{"Github" => "https://github.com/liveforeverx/mix_deps_tree"}]
   end
 end
