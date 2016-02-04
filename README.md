@@ -1,6 +1,8 @@
 # MixDepsTree
 
-Mix task to show dependency tree in terminal
+** DEPRECATED: Use `mix app.tree` in upcoming elixir version: [elixir#4261](https://github.com/elixir-lang/elixir/pull/4261)
+
+Mix task to show dependency tree in terminal.
 
 ## Installation
 
